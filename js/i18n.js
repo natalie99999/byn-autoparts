@@ -218,6 +218,75 @@ const LANGS = {
     footer_desc: "Специализированный производитель деталей шасси. 7100+ SKU, 41 бренд, прямые поставки с 2005 г.",
   },
 
+  AR: {
+    nav_products: "المنتجات",
+    nav_about: "عن الشركة",
+    nav_contact: "اتصل بنا",
+    nav_quote: "طلب عرض سعر",
+    hero_badge: "🏭 مصنّع بمعايير OEM · يوهوان، تشيجيانغ",
+    hero_h1: "قطع غيار <em>الهيكل الدقيقة</em><br>لـ 41 علامة تجارية عالمية",
+    hero_p: "كرات الربط، أطراف قضبان التوجيه، وصلات الموازنة ومكونات التعليق — أكثر من 7,100 رقم قطعة تغطي DODGE وBMW وMERCEDES-BENZ وMITSUBISHI وTESLA وLAND ROVER والمزيد. أسعار مباشرة من المصنع مع مراجع MOOG وTRW.",
+    hero_btn1: "البحث في الكتالوج ←",
+    hero_btn2: "طلب عرض سعر",
+    stat_sku: "رقم قطعة",
+    stat_brands: "علامات تجارية",
+    stat_molds: "مجموعات قوالب",
+    stat_years: "سنوات خبرة",
+    hc_brands: "العلامات التجارية المدعومة",
+    hc_products: "أنواع المنتجات",
+    hc_ref: "البحث برقم المرجع",
+    qs_label: "🔍 بحث سريع عن قطعة:",
+    qs_placeholder: "أدخل رقم BYN أو MOOG أو OEM أو موديل السيارة…",
+    qs_btn: "بحث في الكتالوج",
+    sec_products_label: "نطاق المنتجات",
+    sec_products_title: "حلول شاملة لقطع الهيكل",
+    sec_products_sub: "مصنّع واحد، تغطية كاملة للهيكل — من السيارات الخاصة إلى الشاحنات التجارية.",
+    prod_browse: "تصفح الكتالوج الكامل — أكثر من 7,100 رقم ←",
+    sec_why_label: "لماذا BYN",
+    sec_why_title: "20 عامًا من<br>التميز في التصنيع",
+    why1_title: "إنتاج متكامل داخل المصنع",
+    why1_p: "تشكيل بارد ← تشغيل CNC ← تشطيب مرآة ← لفّ السلك — كل مرحلة تحت سقف واحد في يوهوان.",
+    why2_title: "مكتبة أكثر من 1,000 قالب",
+    why2_p: "معظم مواصفات OEM القياسية تُنتج دون استثمار في قوالب جديدة، مما يقلل وقت التسليم والتكاليف المبدئية.",
+    why3_title: "جاهز للمراجع التقاطعية",
+    why3_p: "كل قطعة مُدرجة مقابل أرقام MOOG وTRW وOEM. ابحث بأي رقم مرجعي للتأكد من التوافق فورًا.",
+    why4_title: "OEM مخصص وعلامة خاصة",
+    why4_p: "تغليف بعلامتك التجارية، أرقام قطع مخصصة، توثيق OEM كامل. الحد الأدنى للطلب قابل للتفاوض للمشترين الجدد.",
+    sec_clients_label: "تغطية العلامات التجارية",
+    sec_clients_title: "41 علامة تجارية، أكثر من 7,100 رقم",
+    sec_clients_sub: "قطع بمراجع تقاطعية OEM وMOOG وTRW. انقر على علامة تجارية للبحث.",
+    sec_process_label: "كيف نعمل",
+    sec_process_title: "من الاستفسار إلى التسليم",
+    proc1: "إرسال استفسار", proc1p: "أرسل رقم القطعة أو مرجع OEM أو موديل السيارة",
+    proc2: "عرض السعر والتأكيد", proc2p: "السعر والحد الأدنى ووقت التسليم خلال 24 ساعة",
+    proc3: "الإنتاج", proc3p: "تشكيل وCNC وتشطيب تحت إشراف ضبط الجودة",
+    proc4: "الفحص", proc4p: "فحوصات الأبعاد والعزم والسطح",
+    proc5: "الشحن", proc5p: "FOB نينغبو/شانغهاي مع التوثيق الكامل",
+    cta_title: "هل أنت مستعد لاستيراد قطع الهيكل؟",
+    cta_sub: "أرسل لنا قائمة قطعك أو أرقام OEM — سنرد خلال 24 ساعة.",
+    cta_btn1: "طلب عرض سعر الآن",
+    cta_btn2: "تصفح الكتالوج",
+    prod_page_title: "كتالوج المنتجات",
+    prod_page_sub: "أكثر من 7,100 رقم · 41 علامة تجارية · بحث بـ BYN وMOOG وTRW وOEM أو الموديل",
+    search_label: "بحث (رقم القطعة / OEM / MOOG / TRW / الموديل)",
+    search_brand: "العلامة التجارية", search_year: "السنة",
+    search_btn: "بحث", search_clear: "مسح",
+    col_brand: "العلامة", col_byn: "رقم BYN", col_moog: "رقم MOOG", col_trw: "رقم TRW",
+    col_oem: "رقم OEM", col_model: "الموديل", col_year: "السنة", col_action: "إجراء",
+    rfq_btn: "طلب سعر",
+    empty_title: "لم يتم العثور على قطع",
+    empty_sub: "جرب مصطلح بحث آخر أو تواصل معنا — قد تكون القطعة موجودة لدينا.",
+    contact_title: "طلب عرض سعر",
+    contact_sub: "أرسل أرقام القطع أو متطلباتك — سنرد بالسعر ووقت التسليم خلال 24 ساعة.",
+    form_title: "طلب عرض السعر (RFQ)",
+    form_sub: "أكمل المتطلبات أدناه. سنرد بالسعر والحد الأدنى ووقت التسليم خلال 24 ساعة.",
+    label_name: "اسمك", label_company: "اسم الشركة", label_email: "البريد الإلكتروني",
+    label_phone: "واتساب / هاتف", label_country: "الدولة", label_category: "فئة المنتج",
+    label_message: "أرقام القطع / مراجع OEM / تفاصيل السيارة",
+    submit_btn: "إرسال طلب عرض السعر ←",
+    footer_desc: "مصنّع متخصص في قطع الهيكل. أكثر من 7,100 رقم، 41 علامة تجارية، توريد مباشر من المصنع منذ 2005.",
+  },
+
   ES: {
     nav_products: "Productos",
     nav_about: "Empresa",
@@ -303,6 +372,8 @@ function applyLang(code) {
     }
   });
   localStorage.setItem('byn_lang', code);
+  document.documentElement.dir = (code === 'AR') ? 'rtl' : 'ltr';
+  document.documentElement.lang = {EN:'en',ZH:'zh',RU:'ru',ES:'es',AR:'ar'}[code] || 'en';
   // Update active button
   document.querySelectorAll('.lang-btn').forEach(b => {
     b.classList.toggle('active', b.dataset.lang === code);
@@ -314,7 +385,7 @@ function buildLangSwitcher() {
   const saved = localStorage.getItem('byn_lang') || 'EN';
   const wrap = document.createElement('div');
   wrap.className = 'lang-switcher';
-  [['EN','EN'],['ZH','中文'],['RU','РУС'],['ES','ES']].forEach(([code, label]) => {
+  [['EN','EN'],['ZH','中文'],['RU','РУС'],['ES','ES'],['AR','عربي']].forEach(([code, label]) => {
     const b = document.createElement('button');
     b.className = 'lang-btn' + (code === saved ? ' active' : '');
     b.textContent = label;

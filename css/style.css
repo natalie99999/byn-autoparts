@@ -88,3 +88,14 @@ footer{background:#060f2e;color:rgba(255,255,255,.5);padding:50px 24px 24px}
 @media(max-width:480px){
   .footer-grid{grid-template-columns:1fr}
 }
+
+/* ── RTL (Arabic) ── */
+[dir="rtl"] body{font-family:"Segoe UI","Tahoma",Arial,sans-serif}
+[dir="rtl"] .nav-inner{flex-direction:row-reverse}
+[dir="rtl"] .lang-switcher{margin-left:0;margin-right:14px}
+[dir="rtl"] .hero-content{text-align:right}
+[dir="rtl"] .section-label,[dir="rtl"] .section-title,[dir="rtl"] .section-sub{text-align:right}
+[dir="rtl"] .why-grid .card{text-align:right}
+[dir="rtl"] .process-steps{direction:rtl}
+[dir="rtl"] .footer-grid{direction:rtl;text-align:right}
+[dir="rtl"] .nav-links{flex-direction:row-reverse}
