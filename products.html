@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Product Catalog – BYN Autoparts | Search 7,100+ Chassis Parts</title>
+<meta name="description" content="Search BYN Autoparts full catalog of 7,100+ chassis parts. Filter by brand, search by MOOG number, TRW number, OEM number or vehicle model.">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.page-hero{background:linear-gradient(135deg,var(--navy),var(--blue));padding:100px 24px 50px;color:#fff}
+.page-hero h1{font-size:38px;font-weight:800;margin-bottom:10px}
+.page-hero p{font-size:16px;opacity:.75}
+
+/* Search Panel */
+.search-panel{background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 30px rgba(0,0,0,.12);max-width:1240px;margin:-30px auto 0;position:relative;z-index:10}
+.search-row{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end}
+.sf{display:flex;flex-direction:column;gap:6px;flex:1;min-width:160px}
+.sf label{font-size:11px;font-weight:700;color:var(--mid);letter-spacing:1px;text-transform:uppercase}
+.sf input,.sf select{border:1.5px solid var(--border);border-radius:8px;padding:10px 14px;font-size:14px;outline:none;font-family:inherit;color:var(--dark);background:#fff}
+.sf input:focus,.sf select:focus{border-color:var(--blue)}
+.sf-wide{flex:2}
+.search-btn{background:var(--blue);color:#fff;border:none;padding:11px 28px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;white-space:nowrap;height:42px;font-family:inherit;transition:.2s}
+.search-btn:hover{background:var(--navy)}
+.clear-btn{background:var(--gray);color:var(--mid);border:none;padding:11px 18px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;height:42px;font-family:inherit}
+
+/* Results */
+.results-area{max-width:1240px;margin:0 auto;padding:24px}
+.results-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:10px}
+.results-count{font-size:14px;font-weight:700;color:var(--dark)}
+.results-count span{color:var(--blue)}
+.sort-sel{border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-size:13px;font-family:inherit;outline:none;cursor:pointer}
+
+/* Table */
+.catalog-table{width:100%;border-collapse:collapse;font-size:13px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.07)}
+.catalog-table thead tr{background:var(--navy);color:#fff}
+.catalog-table th{padding:13px 14px;text-align:left;font-size:11px;font-weight:700;letter-spacing:.5px;white-space:nowrap}
+.catalog-table td{padding:11px 14px;border-bottom:1px solid var(--border);vertical-align:middle}
+.catalog-table tr:last-child td{border:none}
+.catalog-table tr:hover td{background:var(--gray)}
+.brand-tag{display:inline-block;background:var(--light);color:var(--navy);font-size:11px;font-weight:700;padding:3px 8px;border-radius:6px;white-space:nowrap}
+.byn-no{font-family:monospace;font-weight:700;color:var(--blue);font-size:13px}
+.ref-no{font-family:monospace;font-size:11px;color:var(--mid)}
+.rfq-btn{background:var(--red);color:#fff;border:none;padding:5px 12px;border-radius:6px;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap;font-family:inherit}
+.rfq-btn:hover{background:#a93226}
+.hl{background:#fff3c4;border-radius:3px;padding:0 2px}
+
+/* Pagination */
+.pagination{display:flex;gap:8px;justify-content:center;margin-top:24px;flex-wrap:wrap}
+.pg-btn{border:1.5px solid var(--border);background:#fff;padding:8px 14px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;transition:.2s;font-family:inherit}
+.pg-btn:hover,.pg-btn.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.pg-btn:disabled{opacity:.4;cursor:default}
+
+/* Empty state */
+.empty{text-align:center;padding:60px 24px;color:var(--mid)}
+.empty h3{font-size:20px;margin-bottom:8px;color:var(--dark)}
+
+/* Brand filter pills */
+.brand-filter{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 0}
+.brand-pill{background:var(--gray);border:1.5px solid var(--border);color:var(--mid);font-size:12px;font-weight:600;padding:5px 12px;border-radius:20px;cursor:pointer;transition:.2s}
+.brand-pill:hover{border-color:var(--blue);color:var(--blue)}
+.brand-pill.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+/* Mobile table */
+@media(max-width:768px){
+  .catalog-table{display:block;overflow-x:auto}
+  .page-hero h1{font-size:28px}
+  .search-row{flex-direction:column}
+  .sf{width:100%}
+}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KF9TMG6E7X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KF9TMG6E7X');
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-box">BYN</div>
+      <div class="logo-text">BYN Autoparts<span>Taizhou Baoyingnuo Machinery</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="products.html" class="active" data-i18n="nav_products">Products</a></li>
+      <li><a href="about.html" data-i18n="nav_about">About</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta" data-i18n="nav_quote">Get a Quote</a></li>
+    </ul>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="products.html">Products &amp; Catalog</a>
+  <a href="about.html">About / Factory</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" style="color:#ff8f80;font-weight:700">→ Get a Quote</a>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <div style="font-size:12px;opacity:.6;margin-bottom:8px"><a href="index.html" style="color:#fff">Home</a> › Products</div>
+    <h1 data-i18n="prod_page_title">Product Catalog</h1>
+    <p data-i18n="prod_page_sub">7,100+ SKUs · 41 brands · searchable by BYN No., MOOG No., TRW No., OEM No. or vehicle model</p>
+  </div>
+</div>
+
+<div style="max-width:1240px;margin:0 auto;padding:0 24px">
+  <div class="search-panel">
+    <div class="search-row">
+      <div class="sf sf-wide">
+        <label data-i18n="search_label">Search (Part No. / OEM / MOOG / TRW / Model)</label>
+        <input type="text" id="searchInput" placeholder="e.g.  K620398  or  DODGE DURANGO  or  ES3490">
+      </div>
+      <div class="sf">
+        <label data-i18n="search_brand">Brand</label>
+        <select id="brandSel">
+          <option value="">All Brands</option>
+        </select>
+      </div>
+      <div class="sf">
+        <label data-i18n="search_year">Year</label>
+        <input type="text" id="yearInput" placeholder="e.g. 2010">
+      </div>
+      <button class="search-btn" onclick="doSearch()" data-i18n="search_btn">Search</button>
+      <button class="clear-btn" onclick="clearSearch()" data-i18n="search_clear">Clear</button>
+    </div>
+    <div class="brand-filter" id="brandPills"></div>
+  </div>
+</div>
+
+<div class="results-area">
+  <div class="results-bar">
+    <div class="results-count">Showing <span id="countSpan">—</span> results</div>
+    <select class="sort-sel" id="sortSel" onchange="renderPage(1)">
+      <option value="brand">Sort by Brand</option>
+      <option value="byn">Sort by BYN No.</option>
+      <option value="moog">Sort by MOOG No.</option>
+      <option value="model">Sort by Model</option>
+    </select>
+  </div>
+  <div style="overflow-x:auto">
+    <table class="catalog-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th data-i18n="col_brand">Brand</th>
+          <th data-i18n="col_byn">BYN No.</th>
+          <th data-i18n="col_moog">MOOG No.</th>
+          <th data-i18n="col_trw">TRW No.</th>
+          <th data-i18n="col_oem">OEM No.</th>
+          <th data-i18n="col_model">Model</th>
+          <th data-i18n="col_year">Year</th>
+          <th data-i18n="col_action">Action</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+  <div class="empty" id="emptyState" style="display:none">
+    <h3 data-i18n="empty_title">No parts found</h3>
+    <p data-i18n="empty_sub">Try a different search term or <a href="contact.html" style="color:var(--blue)">contact us</a> — we may have the part unlisted.</p>
+  </div>
+  <div class="pagination" id="pagination"></div>
+</div>
+
+<div style="background:var(--gray);padding:40px 24px;text-align:center;margin-top:20px">
+  <p style="font-size:15px;color:var(--mid);margin-bottom:16px">Can't find your part? Send us the OEM number or vehicle details — we'll check our full production list.</p>
+  <a href="contact.html" class="btn btn-primary" style="padding:13px 32px;font-size:15px">Contact Us for Custom Inquiry →</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo"><div class="logo-box">BYN</div><div class="logo-text">BYN Autoparts<span>Taizhou Baoyingnuo Machinery Co., Ltd.</span></div></div>
+      <p style="margin-top:14px" data-i18n="footer_desc">Specialized chassis parts manufacturer. 7,100+ SKUs, 41 brands, factory-direct since 2005.</p>
+    </div>
+    <div class="footer-col"><h4>Products</h4><ul>
+      <li><a href="products.html">Ball Joints</a></li>
+      <li><a href="products.html">Tie Rod Ends</a></li>
+      <li><a href="products.html">Stabilizer Links</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Company</h4><ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul>
+      <li><a href="mailto:web@byn-autoparts.com">web@byn-autoparts.com</a></li>
+      <li><a href="tel:+8618906571798">+86 189 0657 1798</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 Taizhou Baoyingnuo Machinery Co., Ltd.</span><a href="#">www.byn-autoparts.com</a></div>
+</footer>
+
+<a href="https://wa.me/8618906571798" class="wa-float" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="js/catalog-data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/i18n.js"></script>
+<script>
+const PAGE_SIZE = 50;
+let filtered = [];
+let currentPage = 1;
+let activeBrandPill = '';
+
+// Init brand dropdown + pills
+window.addEventListener('load', () => {
+  const sel = document.getElementById('brandSel');
+  const pillContainer = document.getElementById('brandPills');
+
+  // Count by brand
+  const counts = {};
+  BYN_CATALOG.forEach(r => { counts[r.brand] = (counts[r.brand]||0)+1; });
+  const sorted = Object.entries(counts).sort((a,b) => b[1]-a[1]);
+
+  sorted.forEach(([brand, count]) => {
+    const opt = document.createElement('option');
+    opt.value = brand; opt.textContent = `${brand} (${count})`;
+    sel.appendChild(opt);
+
+    const pill = document.createElement('span');
+    pill.className = 'brand-pill';
+    pill.textContent = brand;
+    pill.onclick = () => {
+      activeBrandPill = activeBrandPill === brand ? '' : brand;
+      document.querySelectorAll('.brand-pill').forEach(p => p.classList.remove('active'));
+      if(activeBrandPill) { pill.classList.add('active'); sel.value = brand; }
+      else sel.value = '';
+      doSearch();
+    };
+    pillContainer.appendChild(pill);
+  });
+
+  // Read URL params
+  const params = new URLSearchParams(location.search);
+  if(params.get('q')) { document.getElementById('searchInput').value = params.get('q'); }
+  if(params.get('brand')) {
+    sel.value = params.get('brand');
+    activeBrandPill = params.get('brand');
+    document.querySelectorAll('.brand-pill').forEach(p => {
+      if(p.textContent === params.get('brand')) p.classList.add('active');
+    });
+  }
+  doSearch();
+});
+
+function normalize(s) { return (s||'').toLowerCase().replace(/[\s\-\.]/g,''); }
+
+function doSearch() {
+  const q = normalize(document.getElementById('searchInput').value);
+  const brand = document.getElementById('brandSel').value;
+  const year = document.getElementById('yearInput').value.trim();
+
+  filtered = BYN_CATALOG.filter(r => {
+    if(brand && r.brand !== brand) return false;
+    if(year && !r.year.includes(year)) return false;
+    if(!q) return true;
+    return normalize(r.byn).includes(q)
+        || normalize(r.moog).includes(q)
+        || normalize(r.trw).includes(q)
+        || normalize(r.oem).includes(q)
+        || normalize(r.model).includes(q)
+        || normalize(r.brand).includes(q);
+  });
+
+  // Sort
+  const sort = document.getElementById('sortSel').value;
+  filtered.sort((a,b) => (a[sort]||'').localeCompare(b[sort]||''));
+
+  renderPage(1);
+}
+
+function clearSearch() {
+  document.getElementById('searchInput').value = '';
+  document.getElementById('brandSel').value = '';
+  document.getElementById('yearInput').value = '';
+  activeBrandPill = '';
+  document.querySelectorAll('.brand-pill').forEach(p => p.classList.remove('active'));
+  doSearch();
+}
+
+function highlight(text, q) {
+  if(!q || !text) return text||'';
+  const re = new RegExp('('+q.replace(/[-\/\\^$*+?.()|[\]{}]/g,'\\$&')+')', 'gi');
+  return text.replace(re, '<mark class="hl">$1</mark>');
+}
+
+function renderPage(page) {
+  currentPage = page;
+  const q = document.getElementById('searchInput').value.trim();
+  const start = (page-1)*PAGE_SIZE;
+  const slice = filtered.slice(start, start+PAGE_SIZE);
+
+  document.getElementById('countSpan').textContent =
+    filtered.length.toLocaleString() + (filtered.length !== BYN_CATALOG.length ? ` of ${BYN_CATALOG.length.toLocaleString()}` : '');
+
+  const tbody = document.getElementById('tableBody');
+  tbody.innerHTML = '';
+  document.getElementById('emptyState').style.display = filtered.length ? 'none' : 'block';
+
+  slice.forEach((r, i) => {
+    const rfqData = encodeURIComponent(`BYN No: ${r.byn} | MOOG: ${r.moog} | OEM: ${r.oem} | ${r.brand} ${r.model} ${r.year}`);
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td style="color:var(--mid);font-size:11px">${start+i+1}</td>
+      <td><span class="brand-tag">${highlight(r.brand,q)}</span></td>
+      <td><span class="byn-no">${highlight(r.byn,q)||'—'}</span></td>
+      <td><span class="ref-no">${highlight(r.moog,q)||'—'}</span></td>
+      <td><span class="ref-no">${highlight(r.trw,q)||'—'}</span></td>
+      <td><span class="ref-no" style="font-size:10px">${highlight(r.oem,q)||'—'}</span></td>
+      <td style="font-size:12px;font-weight:600">${highlight(r.model,q)||'—'}</td>
+      <td style="font-size:12px;color:var(--mid)">${r.year||'—'}</td>
+      <td><button class="rfq-btn" onclick="rfq('${rfqData}')">${typeof T==='function'?T('rfq_btn'):'RFQ'}</button></td>`;
+    tbody.appendChild(tr);
+  });
+
+  renderPagination();
+}
+
+function rfq(data) {
+  const msg = decodeURIComponent(data);
+  location.href = 'contact.html?part=' + encodeURIComponent(msg);
+}
+
+function renderPagination() {
+  const total = Math.ceil(filtered.length / PAGE_SIZE);
+  const pag = document.getElementById('pagination');
+  pag.innerHTML = '';
+  if(total <= 1) return;
+
+  const addBtn = (label, page, disabled=false, active=false) => {
+    const b = document.createElement('button');
+    b.className = 'pg-btn' + (active?' active':'');
+    b.textContent = label; b.disabled = disabled;
+    b.onclick = () => { renderPage(page); window.scrollTo(0,200); };
+    pag.appendChild(b);
+  };
+
+  addBtn('← Prev', currentPage-1, currentPage===1);
+  const start = Math.max(1, currentPage-2);
+  const end = Math.min(total, start+4);
+  for(let p=start; p<=end; p++) addBtn(p, p, false, p===currentPage);
+  addBtn('Next →', currentPage+1, currentPage===total);
+}
+
+document.getElementById('searchInput').addEventListener('keydown', e => { if(e.key==='Enter') doSearch(); });
+</script>
+</body>
+</html>

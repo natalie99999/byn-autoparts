@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact & RFQ – BYN Autoparts | Get a Quote Within 24 Hours</title>
+<meta name="description" content="Request a quote from BYN Autoparts. Send your part numbers, OEM references or vehicle details — we respond within 24 hours with pricing and lead time.">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.page-hero{background:linear-gradient(135deg,var(--navy),var(--blue));padding:100px 24px 60px;color:#fff;text-align:center}
+.page-hero h1{font-size:40px;font-weight:800;margin-bottom:10px}
+.page-hero p{font-size:16px;opacity:.75;max-width:500px;margin:0 auto}
+
+.contact-layout{display:grid;grid-template-columns:1fr 1.5fr;gap:50px;max-width:1100px;margin:0 auto;padding:60px 24px}
+
+/* Info column */
+.info-col{}
+.info-item{display:flex;gap:16px;margin-bottom:28px;align-items:flex-start}
+.info-icon{width:48px;height:48px;background:var(--light);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.info-item h4{font-size:13px;color:var(--mid);font-weight:600;margin-bottom:4px}
+.info-item p,.info-item a{font-size:15px;font-weight:600;color:var(--dark)}
+.info-item a{color:var(--blue)}
+
+.wa-card{background:linear-gradient(135deg,#1a7a3a,#25d366);border-radius:16px;padding:24px;color:#fff;margin-top:8px;display:flex;align-items:center;gap:16px}
+.wa-card svg{width:36px;height:36px;fill:#fff;flex-shrink:0}
+.wa-card h4{font-size:15px;font-weight:700;margin-bottom:4px}
+.wa-card p{font-size:12px;opacity:.85}
+.wa-card a{display:inline-block;margin-top:10px;background:rgba(255,255,255,.2);color:#fff;padding:7px 16px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none}
+
+/* Form column */
+.form-card{background:#fff;border-radius:20px;padding:40px;box-shadow:0 4px 30px rgba(0,0,0,.1);border:1px solid var(--border)}
+.form-card h2{font-size:22px;font-weight:800;margin-bottom:6px}
+.form-card .sub{font-size:13px;color:var(--mid);margin-bottom:28px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fg{margin-bottom:18px}
+.fg label{display:block;font-size:12px;font-weight:700;color:var(--mid);margin-bottom:6px;letter-spacing:.5px;text-transform:uppercase}
+.fg input,.fg select,.fg textarea{width:100%;border:1.5px solid var(--border);border-radius:8px;padding:11px 14px;font-size:14px;font-family:inherit;color:var(--dark);outline:none;transition:.2s;background:#fff}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(19,70,168,.08)}
+.fg textarea{resize:vertical;min-height:120px}
+.fg .hint{font-size:11px;color:var(--mid);margin-top:4px}
+.submit-btn{width:100%;background:var(--red);color:#fff;border:none;padding:15px;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;transition:.2s;margin-top:4px}
+.submit-btn:hover{background:#a93226;transform:translateY(-1px)}
+.submit-btn:disabled{background:#ccc;transform:none;cursor:default}
+.privacy{font-size:11px;color:var(--mid);text-align:center;margin-top:12px}
+.success-msg{display:none;background:#d4edda;border:1px solid #a3d9a5;border-radius:10px;padding:20px;text-align:center;color:#1a6b3a;font-weight:600;margin-top:16px}
+.success-msg h3{font-size:18px;margin-bottom:6px}
+
+@media(max-width:860px){
+  .contact-layout{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .page-hero h1{font-size:30px}
+}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KF9TMG6E7X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KF9TMG6E7X');
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-box">BYN</div>
+      <div class="logo-text">BYN Autoparts<span>Taizhou Baoyingnuo Machinery</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="products.html" data-i18n="nav_products">Products</a></li>
+      <li><a href="about.html" data-i18n="nav_about">About</a></li>
+      <li><a href="contact.html" class="active" data-i18n="nav_contact">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta" data-i18n="nav_quote">Get a Quote</a></li>
+    </ul>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="products.html">Products &amp; Catalog</a>
+  <a href="about.html">About / Factory</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="page-hero">
+  <div style="font-size:12px;opacity:.55;margin-bottom:10px"><a href="index.html" style="color:#fff">Home</a> › Contact</div>
+  <h1 data-i18n="contact_title">Get a Quote</h1>
+  <p data-i18n="contact_sub">Send your part numbers or requirements — we respond with pricing &amp; lead time within 24 hours.</p>
+</div>
+
+<div class="contact-layout">
+  <!-- Info -->
+  <div class="info-col">
+    <div class="info-item">
+      <div class="info-icon">📞</div>
+      <div>
+        <h4>Phone / WhatsApp</h4>
+        <a href="tel:+8618906571798">+86 189 0657 1798</a>
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">✉️</div>
+      <div>
+        <h4>Email</h4>
+        <a href="mailto:web@byn-autoparts.com">web@byn-autoparts.com</a>
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">📍</div>
+      <div>
+        <h4>Factory Address</h4>
+        <p>Science &amp; Technology Industrial Park<br>Yuhuan, Taizhou, Zhejiang, China</p>
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">⏱️</div>
+      <div>
+        <h4>Response Time</h4>
+        <p>Within 24 hours · Mon–Sat 08:00–18:00 CST</p>
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">🚢</div>
+      <div>
+        <h4>Shipping Terms</h4>
+        <p>FOB Ningbo / Shanghai<br>Full export documentation provided</p>
+      </div>
+    </div>
+
+    <div class="wa-card">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <div>
+        <h4>Chat on WhatsApp</h4>
+        <p>Fastest way to get a quick answer on availability and pricing</p>
+        <a href="https://wa.me/8618906571798" target="_blank">Open WhatsApp Chat →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form -->
+  <div class="form-card">
+    <h2 data-i18n="form_title">Request for Quotation (RFQ)</h2>
+    <p class="sub" data-i18n="form_sub">Fill in your requirements below. We'll reply with pricing, MOQ and lead time within 24 hours.</p>
+
+    <form id="rfqForm" action="https://formsubmit.co/web@byn-autoparts.com" method="POST">
+      <input type="hidden" name="_subject" value="New RFQ from BYN Autoparts Website">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://www.byn-autoparts.com/contact.html?sent=1">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" style="display:none">
+      <input type="hidden" name="part_details" id="partDetailsField">
+
+      <div class="form-row">
+        <div class="fg">
+          <label data-i18n="label_name">Your Name *</label>
+          <input type="text" name="name" placeholder="John Smith" required>
+        </div>
+        <div class="fg">
+          <label data-i18n="label_company">Company Name</label>
+          <input type="text" name="company" placeholder="ABC Auto Parts Ltd.">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="fg">
+          <label data-i18n="label_email">Email *</label>
+          <input type="email" name="email" placeholder="john@company.com" required>
+        </div>
+        <div class="fg">
+          <label data-i18n="label_phone">WhatsApp / Phone</label>
+          <input type="text" name="phone" placeholder="+1 234 567 8900">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="fg">
+          <label data-i18n="label_country">Country</label>
+          <select name="country">
+            <option value="">Select country…</option>
+            <option>United States</option><option>Germany</option><option>United Kingdom</option>
+            <option>France</option><option>Australia</option><option>Canada</option>
+            <option>Brazil</option><option>Mexico</option><option>Russia</option>
+            <option>United Arab Emirates</option><option>Saudi Arabia</option>
+            <option>South Africa</option><option>Nigeria</option><option>India</option>
+            <option>Japan</option><option>South Korea</option><option>Other</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label data-i18n="label_category">Product Category</label>
+          <select name="category">
+            <option value="">Select type…</option>
+            <option>Ball Joints (Passenger Car)</option>
+            <option>Ball Joints (Truck / Commercial)</option>
+            <option>Tie Rod Ends (Outer)</option>
+            <option>Tie Rod Ends (Inner)</option>
+            <option>Stabilizer Links / Sway Bar Links</option>
+            <option>Suspension Ball Joints</option>
+            <option>Ball Housings / Blanks</option>
+            <option>Mixed / Multiple Categories</option>
+            <option>Custom OEM (drawing available)</option>
+          </select>
+        </div>
+      </div>
+      <div class="fg">
+        <label data-i18n="label_message">Part Numbers / OEM References / Vehicle Details *</label>
+        <textarea id="msgField" name="message" placeholder="Please share:&#10;• BYN No. / MOOG No. / OEM No. / TRW No.&#10;• Vehicle make, model and year&#10;• Quantity needed&#10;• Any specific quality or packaging requirements&#10;&#10;Example: K620398 ball joint for 2008 DODGE DURANGO, qty 500 pcs" required></textarea>
+        <div class="hint">The more detail you provide, the faster we can quote accurately.</div>
+      </div>
+      <button type="submit" class="submit-btn" id="submitBtn" data-i18n="submit_btn">Send Quote Request →</button>
+      <p class="privacy">🔒 Your contact information is used only to respond to your inquiry and will never be shared with third parties.</p>
+    </form>
+    <div class="success-msg" id="successMsg">
+      <h3>✅ Inquiry Sent!</h3>
+      <p>Thank you — we'll reply to your email with pricing and lead time within 24 hours.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section style="background:var(--gray);padding:60px 24px">
+  <div class="container" style="max-width:800px">
+    <div class="section-label text-center">FAQ</div>
+    <div class="section-title text-center">Common Questions</div>
+    <div style="margin-top:36px;display:grid;gap:16px">
+      <details style="background:#fff;border-radius:12px;padding:20px;border:1px solid var(--border)">
+        <summary style="font-weight:700;cursor:pointer;font-size:15px">What is your minimum order quantity (MOQ)?</summary>
+        <p style="margin-top:12px;font-size:14px;color:var(--mid);line-height:1.7">MOQ varies by product. For standard parts in our catalog, MOQ typically starts at 50–100 pieces per SKU. For custom or non-catalog parts, we'll confirm MOQ after reviewing your drawing or specifications. First-order MOQ is negotiable for new customers.</p>
+      </details>
+      <details style="background:#fff;border-radius:12px;padding:20px;border:1px solid var(--border)">
+        <summary style="font-weight:700;cursor:pointer;font-size:15px">Can you supply parts compatible with MOOG or TRW reference numbers?</summary>
+        <p style="margin-top:12px;font-size:14px;color:var(--mid);line-height:1.7">Yes. Our entire catalog is cross-referenced against MOOG and TRW numbers. Simply search by MOOG No. or TRW No. on our Products page, or include the reference number in your inquiry.</p>
+      </details>
+      <details style="background:#fff;border-radius:12px;padding:20px;border:1px solid var(--border)">
+        <summary style="font-weight:700;cursor:pointer;font-size:15px">What is your standard lead time?</summary>
+        <p style="margin-top:12px;font-size:14px;color:var(--mid);line-height:1.7">For in-stock or standard catalog items: 15–25 working days. For items requiring new tooling or custom specifications: 30–45 working days. Lead time is confirmed in the quotation.</p>
+      </details>
+      <details style="background:#fff;border-radius:12px;padding:20px;border:1px solid var(--border)">
+        <summary style="font-weight:700;cursor:pointer;font-size:15px">What shipping terms do you offer?</summary>
+        <p style="margin-top:12px;font-size:14px;color:var(--mid);line-height:1.7">We ship FOB Ningbo or FOB Shanghai. We can also arrange CIF, DDP or other Incoterms on request. Full export documentation (packing list, commercial invoice, certificate of origin) is provided with every shipment.</p>
+      </details>
+      <details style="background:#fff;border-radius:12px;padding:20px;border:1px solid var(--border)">
+        <summary style="font-weight:700;cursor:pointer;font-size:15px">Do you offer private label / OEM packaging?</summary>
+        <p style="margin-top:12px;font-size:14px;color:var(--mid);line-height:1.7">Yes. We support custom branded boxes, bags and labels. Minimum order for custom packaging is typically 200–500 pieces. Please include your packaging requirements in the inquiry form.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo"><div class="logo-box">BYN</div><div class="logo-text">BYN Autoparts<span>Taizhou Baoyingnuo Machinery Co., Ltd.</span></div></div>
+      <p style="margin-top:14px" data-i18n="footer_desc">Specialized chassis parts manufacturer. 7,100+ SKUs, 41 brands, factory-direct since 2005.</p>
+    </div>
+    <div class="footer-col"><h4>Products</h4><ul>
+      <li><a href="products.html">Ball Joints</a></li>
+      <li><a href="products.html">Tie Rod Ends</a></li>
+      <li><a href="products.html">Full Catalog</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Company</h4><ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="about.html#factory">Factory</a></li>
+      <li><a href="about.html#certs">Certifications</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul>
+      <li><a href="mailto:web@byn-autoparts.com">web@byn-autoparts.com</a></li>
+      <li><a href="tel:+8618906571798">+86 189 0657 1798</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 Taizhou Baoyingnuo Machinery Co., Ltd.</span><a href="#">www.byn-autoparts.com</a></div>
+</footer>
+
+<a href="https://wa.me/8618906571798" class="wa-float" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="js/main.js"></script>
+<script src="js/i18n.js"></script>
+<script>
+// Pre-fill from URL params (when coming from products page RFQ button)
+const params = new URLSearchParams(location.search);
+if(params.get('part')) {
+  const msg = decodeURIComponent(params.get('part'));
+  document.getElementById('msgField').value = 'Part enquiry:\n' + msg + '\n\nQuantity needed: ';
+}
+if(params.get('sent') === '1') {
+  document.getElementById('rfqForm').style.display = 'none';
+  document.getElementById('successMsg').style.display = 'block';
+}
+
+document.getElementById('rfqForm').addEventListener('submit', function(e) {
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+});
+</script>
+</body>
+</html>
