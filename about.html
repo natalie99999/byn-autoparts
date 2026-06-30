@@ -42,6 +42,12 @@
 .map-placeholder{background:linear-gradient(135deg,#e8edf7,#d0daf0);border-radius:16px;height:300px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;color:var(--mid)}
 .map-placeholder a{background:var(--blue);color:#fff;padding:10px 22px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none}
 
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:44px}
+.gallery-grid img{width:100%;height:220px;object-fit:cover;border-radius:12px;transition:.3s}
+.gallery-grid img:hover{transform:scale(1.03);box-shadow:0 8px 30px rgba(0,0,0,.15)}
+.gallery-grid img:first-child{grid-column:span 2;height:300px}
+@media(max-width:700px){.gallery-grid{grid-template-columns:1fr 1fr}.gallery-grid img:first-child{grid-column:span 2;height:200px}.gallery-grid img{height:160px}}
+
 @media(max-width:900px){
   .story-grid,.loc-grid{grid-template-columns:1fr}
   .eq-grid{grid-template-columns:repeat(2,1fr)}
@@ -109,27 +115,24 @@
       <a href="products.html" class="btn btn-blue">Browse Catalog</a>
     </div>
   </div>
-  <div class="fade-in">
-    <div class="story-visual">
-      <div class="big-num">20+</div>
-      <div class="big-lbl">Years in chassis parts manufacturing</div>
-      <div style="margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;text-align:left">
-        <div style="background:#fff;border-radius:10px;padding:16px">
-          <div style="font-size:26px;font-weight:800;color:var(--navy)">7,100++</div>
-          <div style="font-size:12px;color:var(--mid);margin-top:3px">Active SKUs in catalog</div>
-        </div>
-        <div style="background:#fff;border-radius:10px;padding:16px">
-          <div style="font-size:26px;font-weight:800;color:var(--navy)">41</div>
-          <div style="font-size:12px;color:var(--mid);margin-top:3px">Vehicle brands covered</div>
-        </div>
-        <div style="background:#fff;border-radius:10px;padding:16px">
-          <div style="font-size:26px;font-weight:800;color:var(--navy)">1,000+</div>
-          <div style="font-size:12px;color:var(--mid);margin-top:3px">Mold sets in library</div>
-        </div>
-        <div style="background:#fff;border-radius:10px;padding:16px">
-          <div style="font-size:26px;font-weight:800;color:var(--navy)">200+</div>
-          <div style="font-size:12px;color:var(--mid);margin-top:3px">Global customers</div>
-        </div>
+  <div class="fade-in" style="position:relative;border-radius:20px;overflow:hidden">
+    <img src="images/e0bd98a6-51c8-47ab-919f-a0c4fbb23942.jpg" alt="BYN chassis parts" style="width:100%;height:380px;object-fit:cover;border-radius:20px;display:block">
+    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(6,15,46,.85));padding:24px;border-radius:0 0 20px 20px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div style="background:rgba(255,255,255,.12);border-radius:10px;padding:14px;backdrop-filter:blur(6px)">
+        <div style="font-size:24px;font-weight:800;color:#fff">7,100+</div>
+        <div style="font-size:11px;color:rgba(255,255,255,.7);margin-top:3px">Active SKUs</div>
+      </div>
+      <div style="background:rgba(255,255,255,.12);border-radius:10px;padding:14px;backdrop-filter:blur(6px)">
+        <div style="font-size:24px;font-weight:800;color:#fff">41</div>
+        <div style="font-size:11px;color:rgba(255,255,255,.7);margin-top:3px">Vehicle brands</div>
+      </div>
+      <div style="background:rgba(255,255,255,.12);border-radius:10px;padding:14px;backdrop-filter:blur(6px)">
+        <div style="font-size:24px;font-weight:800;color:#fff">1,000+</div>
+        <div style="font-size:11px;color:rgba(255,255,255,.7);margin-top:3px">Mold sets</div>
+      </div>
+      <div style="background:rgba(255,255,255,.12);border-radius:10px;padding:14px;backdrop-filter:blur(6px)">
+        <div style="font-size:24px;font-weight:800;color:#fff">20+</div>
+        <div style="font-size:11px;color:rgba(255,255,255,.7);margin-top:3px">Years experience</div>
       </div>
     </div>
   </div>
@@ -150,6 +153,26 @@
       <div class="eq-card fade-in"><div class="eq-icon">🧼</div><div class="eq-val">1</div><div class="eq-name">Auto Cleaning Line</div></div>
       <div class="eq-card fade-in"><div class="eq-icon">🔬</div><div class="eq-val">2</div><div class="eq-name">QC Detection Sets</div></div>
       <div class="eq-card fade-in"><div class="eq-icon">📦</div><div class="eq-val">7,100++</div><div class="eq-name">Product SKUs</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Factory Gallery -->
+<section style="padding:70px 24px;background:#fff">
+  <div class="container">
+    <div class="section-label fade-in text-center">Factory</div>
+    <div class="section-title fade-in text-center">Our Manufacturing Facility</div>
+    <div class="section-sub fade-in text-center">15,000 m² production floor in Yuhuan, Zhejiang — fully equipped from forging to final inspection.</div>
+    <div class="gallery-grid">
+      <img src="images/4a7b6a83-eb3a-4fd0-979c-16504d25a686.jpg" alt="BYN Autoparts factory floor" loading="lazy">
+      <img src="images/f4436ffb-9f07-4564-9ac1-8b03d263a527.jpg" alt="CNC machining center" loading="lazy">
+      <img src="images/5e5527e3-ab56-43a7-a8fd-36f64f3de1ae.jpg" alt="Production line" loading="lazy">
+      <img src="images/8d8a366e-3ec6-4718-b888-66b362408d21.jpg" alt="Ball joint manufacturing" loading="lazy">
+      <img src="images/6daf4515-f6d5-48b4-b33b-6e4001ad3c77.jpg" alt="Quality inspection" loading="lazy">
+      <img src="images/feb72313-a691-4b34-a8ed-4f39fb5cf19f.jpg" alt="Finished parts warehouse" loading="lazy">
+      <img src="images/3685f558-68b1-4423-aa13-ba5a7c871c51.jpg" alt="Wire rolling machines" loading="lazy">
+      <img src="images/b9c6409f-7de5-422a-875a-c37143f0d3b8.jpg" alt="Cold forging process" loading="lazy">
+      <img src="images/a6909223-7fcd-447b-813b-656766a5f5e1.jpg" alt="Mold storage" loading="lazy">
     </div>
   </div>
 </section>
